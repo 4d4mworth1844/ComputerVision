@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MLer's Web</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <h1>
+        <div>MLER CONTROL CENTER</div>
+        <a  style="color:rgb(255, 255, 255);" href ="https://github.com/kido2k3/MLer-REMOTE-ROBOT" title="Github link">Our information</a>
+        </h1>
+      </h1>
+    </header>
+    <div class="container_swap">
+      <div id="container" class="div_left">
+        <header>
+          <h1>
+            <div>Connect Service</div>
+          </h1>
+        </header>
+        <main>
+          <section>
+            <h2>1. Find the robot and pair.</h2>
+            <label for="robotSelect">Robot profile: </label>
+            <select id="robotSelect">
+              <option value="RPI_BW_001" selected>RPI_BW_001</option>
+            </select>
+            <button id="pairButton">Pairing</button>
+            <!-- <br /> -->
+            <label for="">Connected Robot Name is </label>
+            <input
+              type="text"
+              id="robotNameInput"
+              value=""
+              placeholder=""
+              disabled
+            />
+          </section>
+  
+          <section>
+            <h2>2. Send the media server information to robot.</h2>
+            <label for="">SSID: </label>
+            <input type="text" id="ssidInput" value="" placeholder="" />
+            <!-- <br/> -->
+            <label for="">Password: </label>
+            <input type="password" id="passwordInput" value="" placeholder="" />
+            <br/>
+            <label for="">Host: </label>
+            <!input type="text" id="hostInput" value="" placeholder="" />
+            <select id="hostInput">
+              <option value="agilertc.com" selected>agilertc.com</option>
+            </select>
+            <label for="">Port: </label>
+            <!input type="number" id="portInput" value="" placeholder="" />
+            <select id="portInput">
+              <option value="8276" selected>8276</option>
+              <option value="8277">8277</option>
+            </select>
+            <!-- <br /> -->
+  
+            <label for="">Channel Name: </label>
+            <input type="text" id="channelInput" value="" placeholder="" />
+  
+            <button id="sendMediaServerInfoButton">Send</button>
+          </section>
+        </main>
+      </div>
+      <div id="Video" class="div_right">
+        <header>
+          <h1>
+            <div>MLer's video</div>
+          </h1>
+        </header>
+        <main>
+          
+          <section>
+            <div class="box_button">
+            <open_button id="openWebSocketButton">OPEN</open_button>
+            <stop_button id="stopButton">STOP</stop_button>
+            </div>
+            <div class="box1">
+                <canvas id="canvasElement"></canvas>
+                <div class="box2">
+                  <video id="videoElement" autoplay muted></video>
+                    <textarea
+                      disabled
+                      name=""
+                      id="messageView"
+                      cols="10"
+                      rows="10"
+                    ></textarea>
+                    <p id='gesture_output'></p>
+                </div>
+            </div>  
+          </section>
+        </main>
+      </div>
+    </div>
+    <script type = "module" src="script.js"></script>
+  </body>
+</html>
